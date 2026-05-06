@@ -1,1 +1,11 @@
+# Compiled Executables
 *.exe
+*.o
+*.out
+
+# Database Persistence Files
+database.aof
+
+# VS Code / OS Files
+.vscode/
+.DS_Store

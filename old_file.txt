@@ -4,7 +4,7 @@
 #include "lru_cache.h"
 
 using namespace std;
-
+using namespace VVR;
 // Your existing parser goes here:
 string handleClientCommand(const string& command, LRUcache& db) {
     stringstream ss(command);
@@ -16,7 +16,7 @@ string handleClientCommand(const string& command, LRUcache& db) {
         if(key.empty() || value.empty()) {
             return "ERROR in key value format as action <key> <value>\n";
         }
-        db.put(key, value);
+        db.put(key, value,60000);
         return "ok \n";
     }
     else if(action == "GET") {
